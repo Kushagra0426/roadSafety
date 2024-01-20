@@ -4,23 +4,210 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+
     <link rel="stylesheet" href="/css/app.css" />
     <script src="scipts/app.js"></script>
+
+    <style>
+      body{
+        background-image:url('final-image.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      footer{
+        background-color: transparent;
+        padding-top: 30px;
+        margin-top: auto;
+      }
+      .footerContainer{
+        width: 100%;
+        margin: 10px;
+        padding: 20;
+        bottom: 0;
+        display: inline-block;
+      }
+      .socialIcons{
+        display: flex;
+        justify-content: center;
+      }
+      .socialIcons a{
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .socialIcons a i{
+        font-size: 2em;
+        color: black;
+        capacity: 0.9;
+      }
+      .socialIcons a:hover{
+        background-color: #111;
+        transition: 0.5s;
+      }
+      .socialIcons a:hover i{
+        color: white;
+        transition: 0.5s;
+      }
+      .footerNav{
+        margin: 30px 0;
+      }
+      .footerNav ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+      .footerNav ul li a{
+        color: white;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+      .footerNav ul li a:hover{
+        opacity: 1;
+      }
+      .footerBottom{
+        background-color: #000;
+        padding: 20px;
+        text-align: center;
+      }
+      .footerBottom p{
+        color: white;
+      }
+      .designer{
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin: 0px 5px;
+      }
+      @media (max-width: 700px){
+        .footerNav ul{
+          flex-direction: column;
+        }
+        .footerNav ul li{
+          width: 100%;
+          text-align: center;
+          margin: 10px;
+        }
+      }
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="mui-appbar">
       <table width="100%">
         <tr style="vertical-align: middle">
-          <td class="mui--appbar-height">Nature</td>
-          <td class="mui--appbar-height" align="right"></td>
+          <td class="mui--appbar-height px-4" style="font-size: 30px" id="back">
+            <i class="fas fa-home pe-3"></i> SMOOTH RIDE
+          </td>
         </tr>
       </table>
     </div>
+    <h2 class="p-3" style="color: white;" >Dashboard</h2>
+    <div class="dashboard" style="position: relative; margin: 100px 0px; font-color: white">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div
+              class="container d-2"
+              style="position: absolute; top: 0; left: 200px"
+              id="a1"
+            >
+              <div class="row d-icon" style="color: white;">
+                <img src="res/icon2.png"  class="" />
+
+                <span><b>Pothole Map</b></span>
+              </div>
+            </div>
+            <div
+              class="container d-2"
+              id="a2"
+              style="position: absolute; top: 0; left: 600px"
+            >
+              <div class="row d-icon" style="color: white;">
+                <img src="res/icon3.png"  class="" />
+                <span><b>Report Pothole<b></span>
+              </div>
+            </div>
+
+            <div
+              class="container d-2"
+              id="a3"
+              style="position: absolute; top: 0; left: 1000px; "
+            >
+              <div class="row d-icon" style="color: white;">
+                <img src="res/icon4.jpg"  class="" />
+                <span><b>Hall of Shame<b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h5 class="footer"><b></b></h5>
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-google-plus"></i></a>
+        </div>
+        <div class="footerNav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Items</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Our Team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <p>Copyright &copy;2024; Designed by <span class="designer"> Unstoppable Girls</p>
+        </div>
+      </footer>
   </body>
 </html>
