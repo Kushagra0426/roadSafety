@@ -41,17 +41,33 @@
 
     <link rel="stylesheet" href="/css/app.css" />
     <script src="scipts/app.js"></script>
+    <style>
+      .google-map {
+          padding-bottom: 50%;
+          position: relative;
+      }
+
+      .google-map iframe {
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          position: absolute;
+      }
+    </style>
   </head>
   <body style="background: #f2f3f5">
     <div class="mui-appbar">
       <table width="100%">
         <tr style="vertical-align: middle">
           <td class="mui--appbar-height px-4" style="font-size: 20px" id="back">
-            <i class="fas fa-arrow-left pe-3"></i> Pothole App
+            <i class="fas fa-arrow-left pe-3"></i> Pothole Map
           </td>
         </tr>
       </table>
     </div>
-    <div class="pothole-gps"></div>
+    <div class="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2304547867193!2d77.48598957532943!3d28.472605575752436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceb193588358f%3A0x8274cec5a1321578!2sGL%20Bajaj%20Institute%20of%20Technology%20%26%20Management!5e0!3m2!1sen!2sin!4v1705781650813!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </body>
 </html>
